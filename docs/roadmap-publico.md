@@ -10,7 +10,7 @@ Este arquivo mostra, de forma simples, no que estamos focados agora e como voce 
 
 ## O que estamos construindo agora
 
-- Melhorar componentes base (ex.: `Button`, `Badge`, `Card` e afins).
+- Melhorar componentes base (ex.: `Button`, `Badge`, `Callout` e afins).
 - Garantir consistencia visual com tokens.
 - Tornar a documentacao mais clara para uso e contribuicao.
 

@@ -32,6 +32,11 @@ const preview: Preview = {
     }
   ],
   parameters: {
+    options: {
+      storySort: {
+        order: ["Components", ["Button", "Callout", "Badge"]]
+      }
+    },
     controls: {
       matchers: {
         color: /(background|color)$/i,

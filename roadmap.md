@@ -113,7 +113,7 @@ Objetivo:
 - provar adocao real com baixo risco operacional.
 
 Escopo:
-- selecionar 2-3 componentes de baixo risco e alto uso (`Button`, `Badge`, `Card`);
+- selecionar 2-3 componentes de baixo risco e alto uso (`Button`, `Badge`, `Callout`);
 - criar mapeamento `legado -> design-system`;
 - aplicar rollout incremental por modulo com fallback;
 - medir impacto visual, a11y e estabilidade.
@@ -236,7 +236,7 @@ Para um componente ser considerado pronto:
 - Onda 0: inventario e classificacao de componentes legados.
 - Onda 1: acao/feedback (`Button`, `Badge`, `Alert`, `Toast`).
 - Onda 2: formularios (`Input`, `Select`, `Checkbox`, `Radio`, `Switch`).
-- Onda 3: navegacao/layout (`Tabs`, `Dialog`, `Popover`, `Tooltip`, `Card`).
+- Onda 3: navegacao/layout (`Tabs`, `Dialog`, `Popover`, `Tooltip`).
 - Onda 4: componentes complexos (tabelas, rich text, pagamentos).
 
 Regra de progresso:
