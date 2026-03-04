@@ -1,5 +1,13 @@
 # @conty/tokens
 
+## 0.0.2
+
+### Patch Changes
+
+- Add a token-first `Callout` with semantic variants and size scale in `@conty/ui`.
+  Refresh `Badge` in `@conty/ui` to align with Button variants (`surface`, `solid`, `soft`, `ghost`), add size scale (`1`-`4`), and introduce semantic color options (`purple`, `cyan`, `orange`, `pink`, `success`, `warning`, `danger`).
+  Add matching callout and badge semantic tokens plus theme CSS variables in `@conty/tokens`.
+
 ## 0.0.1
 
 ### Patch Changes
