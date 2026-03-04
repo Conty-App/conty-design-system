@@ -1,6 +1,6 @@
 {
   "name": "@conty/ui",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "private": false,
   "description": "Conty UI components",
   "type": "module",
@@ -16,6 +16,9 @@
       "default": "./dist/index.js"
     },
     "./styles.css": "./src/styles.css"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "scripts": {
     "build": "tsup src/index.ts --format esm --dts --clean --external react --external react-dom",

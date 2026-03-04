@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/react"
+import type { Meta, StoryObj } from "@storybook/react-vite"
 
 import {
   Button,
@@ -35,7 +35,7 @@ export const Default: Story = {
         </p>
       </CardContent>
       <CardFooter>
-        <Button size="sm">Selecionar plano</Button>
+        <Button size="1">Selecionar plano</Button>
       </CardFooter>
     </Card>
   )
