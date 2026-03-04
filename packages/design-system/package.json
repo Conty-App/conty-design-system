@@ -17,6 +17,9 @@
     },
     "./styles.css": "./src/styles.css"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "build": "tsup src/index.ts --format esm --dts --clean --external react --external react-dom",
     "lint": "eslint src --ext .ts",

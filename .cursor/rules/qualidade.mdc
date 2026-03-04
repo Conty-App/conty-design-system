@@ -12,7 +12,8 @@ alwaysApply: true
 
 ## Para UI e tokens
 - Atualizar ou criar story relevante no Storybook.
-- Evitar hardcode visual novo; usar tokens.
+- Tokens sao a opcao padrao para qualquer valor visual novo (cor, sombra, espacamento, raio e tipografia).
+- Hardcode visual novo deve ser tratado como excecao, com justificativa explicita no PR.
 - Descrever como validar o comportamento alterado.
 
 ## Para mudancas versionaveis

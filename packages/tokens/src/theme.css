@@ -21,6 +21,25 @@
   --radius-sm: var(--radius-sm);
   --radius-md: var(--radius-md);
   --radius-lg: var(--radius-lg);
+  --button-surface-bg: var(--button-surface-bg);
+  --button-surface-fg: var(--button-surface-fg);
+  --button-surface-border: var(--button-surface-border);
+  --button-surface-hover-bg: var(--button-surface-hover-bg);
+  --button-surface-hover-border: var(--button-surface-hover-border);
+  --button-surface-shadow: var(--button-surface-shadow);
+  --button-solid-bg: var(--button-solid-bg);
+  --button-solid-fg: var(--button-solid-fg);
+  --button-solid-hover-bg: var(--button-solid-hover-bg);
+  --button-solid-shadow: var(--button-solid-shadow);
+  --button-soft-bg: var(--button-soft-bg);
+  --button-soft-fg: var(--button-soft-fg);
+  --button-soft-hover-bg: var(--button-soft-hover-bg);
+  --button-ghost-bg: var(--button-ghost-bg);
+  --button-ghost-fg: var(--button-ghost-fg);
+  --button-ghost-hover-bg: var(--button-ghost-hover-bg);
+  --button-disabled-bg: var(--button-disabled-bg);
+  --button-disabled-fg: var(--button-disabled-fg);
+  --button-disabled-border: var(--button-disabled-border);
 }
 
 :root {
@@ -46,6 +65,25 @@
   --radius-sm: 0.525rem;
   --radius-md: 0.625rem;
   --radius-lg: 0.725rem;
+  --button-surface-bg: oklch(1 0 0);
+  --button-surface-fg: oklch(0.2178 0 0);
+  --button-surface-border: #e4e4e7;
+  --button-surface-hover-bg: #fafafa;
+  --button-surface-hover-border: #b4b4be;
+  --button-surface-shadow: 0 0 2px rgba(0, 0, 0, 0.12);
+  --button-solid-bg: oklch(0.6248 0.2042 257.0818);
+  --button-solid-fg: oklch(1 0 0);
+  --button-solid-hover-bg: #1754d8;
+  --button-solid-shadow: 0 2px 8px rgba(37, 99, 235, 0.16);
+  --button-soft-bg: color-mix(in oklab, var(--button-solid-bg) 15%, transparent);
+  --button-soft-fg: var(--button-solid-bg);
+  --button-soft-hover-bg: color-mix(in oklab, var(--button-solid-bg) 25%, transparent);
+  --button-ghost-bg: transparent;
+  --button-ghost-fg: var(--button-solid-bg);
+  --button-ghost-hover-bg: color-mix(in oklab, var(--button-solid-bg) 15%, transparent);
+  --button-disabled-bg: #f4f4f5;
+  --button-disabled-fg: #a1a1aa;
+  --button-disabled-border: #e4e4e7;
 }
 
 .dark {
@@ -68,4 +106,23 @@
   --border: oklch(0.28 0 0);
   --input: oklch(0.2178 0 0);
   --ring: oklch(0.5103 0 0);
+  --button-surface-bg: #0b0d10;
+  --button-surface-fg: oklch(0.9551 0 0);
+  --button-surface-border: #3f3f46;
+  --button-surface-hover-bg: #27272a;
+  --button-surface-hover-border: #63636b;
+  --button-surface-shadow: 0 0 2px rgba(0, 0, 0, 0.12);
+  --button-solid-bg: oklch(0.6248 0.2042 257.0818);
+  --button-solid-fg: oklch(0.9551 0 0);
+  --button-solid-hover-bg: #1754d8;
+  --button-solid-shadow: 0 2px 8px rgba(37, 99, 235, 0.16);
+  --button-soft-bg: color-mix(in oklab, var(--button-solid-bg) 25%, transparent);
+  --button-soft-fg: var(--button-solid-fg);
+  --button-soft-hover-bg: color-mix(in oklab, var(--button-solid-bg) 35%, transparent);
+  --button-ghost-bg: transparent;
+  --button-ghost-fg: var(--button-solid-fg);
+  --button-ghost-hover-bg: color-mix(in oklab, var(--button-solid-bg) 20%, transparent);
+  --button-disabled-bg: #f4f4f5;
+  --button-disabled-fg: #a1a1aa;
+  --button-disabled-border: #e4e4e7;
 }

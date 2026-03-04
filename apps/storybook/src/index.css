@@ -8,3 +8,27 @@
 :root {
   color-scheme: light dark;
 }
+
+:root[data-button-theme="light"] {
+  --button-surface-bg: oklch(1 0 0);
+  --button-surface-fg: oklch(0.2178 0 0);
+  --button-surface-border: #e4e4e7;
+  --button-surface-hover-bg: #fafafa;
+  --button-surface-hover-border: #b4b4be;
+  --button-surface-shadow: 0 0 2px rgba(0, 0, 0, 0.12);
+  --button-disabled-bg: #f4f4f5;
+  --button-disabled-fg: #a1a1aa;
+  --button-disabled-border: #e4e4e7;
+}
+
+:root[data-button-theme="dark"] {
+  --button-surface-bg: #18181b;
+  --button-surface-fg: rgba(255, 255, 255, 0.92);
+  --button-surface-border: #3f3f46;
+  --button-surface-hover-bg: #27272a;
+  --button-surface-hover-border: #63636b;
+  --button-surface-shadow: 0 0 2px rgba(0, 0, 0, 0.12);
+  --button-disabled-bg: #f4f4f5;
+  --button-disabled-fg: #a1a1aa;
+  --button-disabled-border: #e4e4e7;
+}

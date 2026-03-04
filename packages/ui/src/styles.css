@@ -8,3 +8,21 @@ body {
   background: var(--background);
   font-family: Inter, system-ui, sans-serif;
 }
+
+.with-icons > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.with-icons svg {
+  order: -1;
+}
+
+.with-icons[data-loading="true"] > span > svg:not(.with-icons-spinner) {
+  display: none;
+}
+
+.with-icons .with-icons-spinner {
+  order: -1;
+}

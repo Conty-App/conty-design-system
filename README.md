@@ -55,6 +55,7 @@ npm run storybook
 - `docs/qualidade.md`: checks minimos de qualidade.
 - `docs/organizacao-repo.md`: convencoes de organizacao do monorepo.
 - `docs/release-process.md`: passo a passo de release.
+- `docs/button.md`: contrato atual e guia rapido do componente Button.
 
 ## Cursor Rules
 

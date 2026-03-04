@@ -17,6 +17,7 @@ Padrao simples para contribuir com qualidade sem travar velocidade.
 - [ ] Impacto em API publica documentado (se houver).
 - [ ] Passos de teste local descritos.
 - [ ] Changeset criado (se a mudanca for versionavel).
+- [ ] Valores visuais novos foram implementados via tokens (sem hardcode sem justificativa).
 
 ## Boas praticas para devs
 - Comecar pelo mais simples que resolve o problema.
