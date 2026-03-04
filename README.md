@@ -13,6 +13,44 @@ Projeto inicial: a ideia é construir em publico, com contribuicoes pequenas e f
 - `@conty/tsconfig`: presets de TypeScript.
 - `@conty/storybook`: catalogo visual e ambiente de desenvolvimento.
 
+## Status de publicacao
+
+Pacotes ja publicados no npm:
+
+- `@conty/design-system@0.0.0`
+- `@conty/tokens@0.0.1`
+- `@conty/ui@0.0.1`
+
+## Instalar e usar no projeto
+
+Instalacao minima para usar componentes React:
+
+```bash
+npm install @conty/ui @conty/tokens
+```
+
+Se quiser usar o pacote de entrada:
+
+```bash
+npm install @conty/design-system
+```
+
+Exemplo rapido de uso (React):
+
+```tsx
+import "@conty/ui/styles.css"
+import { Button } from "@conty/ui"
+
+export function Example() {
+  return <Button variant="solid">Continuar</Button>
+}
+```
+
+Notas:
+
+- `@conty/ui/styles.css` deve ser importado uma vez na aplicacao.
+- Se estiver usando tokens diretamente, importe `@conty/tokens/theme.css` no setup global de estilos.
+
 ## Requisitos
 
 - Node.js `>=20`
