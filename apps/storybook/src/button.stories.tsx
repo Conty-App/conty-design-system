@@ -2,6 +2,17 @@ import type { Meta, StoryObj } from "@storybook/react-vite"
 
 import { Button } from "@conty/ui"
 
+const StoryGrid = ({ children }: { children: React.ReactNode }) => {
+  return (
+    <div className="flex items-center gap-3">
+      {children}
+    </div>
+  )
+}
+
+const VARIANTS = ["surface", "solid", "soft", "ghost"] as const;
+const capitalize = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);
+
 const meta = {
   title: "Components/Button",
   component: Button,
@@ -59,106 +70,73 @@ export const Default: Story = {
 export const AVariantGrid: Story = {
   name: "Variant Grid",
   render: () => (
-    <div className="flex items-center gap-3">
-      <Button variant="surface">Surface</Button>
-      <Button variant="solid">Solid</Button>
-      <Button variant="soft">Soft</Button>
-      <Button variant="ghost">Ghost</Button>
-    </div>
+    <StoryGrid>
+      {VARIANTS.map((v) => (
+        <Button key={v} variant={v}>
+          {capitalize(v)}
+        </Button>
+      ))}
+    </StoryGrid>
   )
 }
 
 export const Size: Story = {
   render: () => (
-    <div className="flex items-center gap-3">
+    <StoryGrid>
       <Button size="1">Size 1</Button>
       <Button size="2">Size 2</Button>
       <Button size="3">Size 3</Button>
       <Button size="4">Size 4</Button>
-    </div>
+    </StoryGrid>
   )
 }
 
 export const WithIcons: Story = {
   render: () => (
-    <div className="flex items-center gap-3">
-      <Button className="with-icons" variant="surface">
-        Surface
-        <LeftIcon />
-      </Button>
-      <Button className="with-icons" variant="solid">
-        Solid
-        <LeftIcon />
-      </Button>
-      <Button className="with-icons" variant="soft">
-        Soft
-        <LeftIcon />
-      </Button>
-      <Button className="with-icons" variant="ghost">
-        Ghost
-        <LeftIcon />
-      </Button>
-    </div>
+    <StoryGrid>
+      {VARIANTS.map((v) => (
+        <Button key={v} className="with-icons" variant={v}>
+          {capitalize(v)}
+          <LeftIcon />
+        </Button>
+      ))}
+    </StoryGrid>
   )
 }
 
 export const WithIconsLoading: Story = {
   render: () => (
-    <div className="flex items-center gap-3">
-      <Button className="with-icons" variant="surface" loading>
-        Surface
-        <LeftIcon />
-      </Button>
-      <Button className="with-icons" variant="solid" loading>
-        Solid
-        <LeftIcon />
-      </Button>
-      <Button className="with-icons" variant="soft" loading>
-        Soft
-        <LeftIcon />
-      </Button>
-      <Button className="with-icons" variant="ghost" loading>
-        Ghost
-        <LeftIcon />
-      </Button>
-    </div>
+    <StoryGrid>
+      {VARIANTS.map((v) => (
+        <Button key={v} className="with-icons" variant={v} loading>
+          {capitalize(v)}
+          <LeftIcon />
+        </Button>
+      ))}
+    </StoryGrid>
   )
 }
 
 export const Disabled: Story = {
   render: () => (
-    <div className="flex items-center gap-3">
-      <Button variant="surface" disabled>
-        Surface Disabled
-      </Button>
-      <Button variant="solid" disabled>
-        Solid Disabled
-      </Button>
-      <Button variant="soft" disabled>
-        Soft Disabled
-      </Button>
-      <Button variant="ghost" disabled>
-        Ghost Disabled
-      </Button>
-    </div>
+    <StoryGrid>
+      {VARIANTS.map((v) => (
+        <Button key={v} variant={v} disabled>
+          {capitalize(v)} Disabled
+        </Button>
+      ))}
+    </StoryGrid>
   )
 }
 
 export const Loading: Story = {
   render: () => (
-    <div className="flex items-center gap-3">
-      <Button variant="surface" loading>
-        Surface Loading
-      </Button>
-      <Button variant="solid" loading>
-        Solid Loading
-      </Button>
-      <Button variant="soft" loading>
-        Soft Loading
-      </Button>
-      <Button variant="ghost" loading>
-        Ghost Loading
-      </Button>
-    </div>
+    <StoryGrid>
+      {VARIANTS.map((v) => (
+        <Button key={v} variant={v} loading>
+          {capitalize(v)} Loading
+        </Button>
+      ))}
+    </StoryGrid>
   )
 }
