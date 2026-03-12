@@ -23,7 +23,9 @@
   "scripts": {
     "build": "tsup src/index.ts --format esm --dts --clean --external react --external react-dom",
     "lint": "eslint src --ext .ts,.tsx",
-    "typecheck": "tsc -p tsconfig.json --noEmit"
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest"
   },
   "dependencies": {
     "@conty/tokens": "*",
@@ -35,5 +37,13 @@
   "peerDependencies": {
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.2",
+    "@testing-library/user-event": "^14.6.1",
+    "@vitest/coverage-v8": "^4.0.18",
+    "jsdom": "^28.1.0",
+    "vitest": "^4.0.18"
   }
 }
