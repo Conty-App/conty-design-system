@@ -14,6 +14,7 @@
     "storybook": "npm run storybook --workspace @conty/storybook",
     "build-storybook": "npm run build-storybook --workspace @conty/storybook",
     "test": "npm run test --workspaces --if-present",
+    "test-storybook": "npm run test-storybook --workspace @conty/storybook",
     "changeset": "changeset",
     "version-packages": "changeset version",
     "release": "changeset publish"
