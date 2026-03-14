@@ -1,5 +1,11 @@
 # @conty/ui
 
+## 0.2.1
+
+### Patch Changes
+
+- 92dd787: test: add render and props coverage for Button, Badge and Callout components
+
 ## 0.2.0
 
 ### Minor Changes
