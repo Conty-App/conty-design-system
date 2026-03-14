@@ -13,6 +13,7 @@
     "typecheck": "npm run typecheck --workspaces --if-present",
     "storybook": "npm run storybook --workspace @conty/storybook",
     "build-storybook": "npm run build-storybook --workspace @conty/storybook",
+    "test": "npm run test --workspaces --if-present",
     "changeset": "changeset",
     "version-packages": "changeset version",
     "release": "changeset publish"

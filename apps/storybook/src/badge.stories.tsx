@@ -2,6 +2,22 @@ import type { Meta, StoryObj } from "@storybook/react-vite"
 
 import { Badge } from "@conty/ui"
 
+const StoryGrid = ({ children }: { children: React.ReactNode }) => {
+  return (
+    <div className="flex flex-wrap items-center gap-3">
+      {children}
+    </div>
+  )
+}
+
+const VARIANTS = ["surface", "solid", "soft", "ghost"] as const
+const SIZES = ["1", "2", "3", "4"] as const
+const COLORS = ["purple", "cyan", "orange", "pink", "success", "warning", "danger"] as const
+const LINK_VARIANTS = ["surface", "solid", "ghost"] as const
+
+const capitalize = (s: string) => s.charAt(0).toUpperCase() + s.slice(1)
+const preventDefaultClick = (event: React.MouseEvent) => event.preventDefault()
+
 const meta = {
   title: "Components/Badge",
   component: Badge,
@@ -14,15 +30,15 @@ const meta = {
   argTypes: {
     variant: {
       control: "select",
-      options: ["surface", "solid", "soft", "ghost"]
+      options: [...VARIANTS]
     },
     size: {
       control: "select",
-      options: ["1", "2", "3", "4"]
+      options: [...SIZES]
     },
     color: {
       control: "select",
-      options: ["purple", "cyan", "orange", "pink", "success", "warning", "danger"]
+      options: [...COLORS]
     },
     asChild: {
       control: "boolean"
@@ -42,58 +58,44 @@ export const Default: Story = {}
 export const AVariantGrid: Story = {
   name: "Variant Grid",
   render: () => (
-    <div className="flex flex-wrap items-center gap-3">
-      <Badge variant="surface">Surface</Badge>
-      <Badge variant="solid">Solid</Badge>
-      <Badge variant="soft">Soft</Badge>
-      <Badge variant="ghost">Ghost</Badge>
-    </div>
+    <StoryGrid>
+      {VARIANTS.map((v) => (
+        <Badge key={v} variant={v}>{capitalize(v)}</Badge>
+      ))}
+    </StoryGrid>
   )
 }
 
 export const Color: Story = {
   render: () => (
-    <div className="flex flex-wrap items-center gap-3">
-      <Badge color="purple">Badge</Badge>
-      <Badge color="cyan">Badge</Badge>
-      <Badge color="orange">Badge</Badge>
-      <Badge color="pink">Badge</Badge>
-      <Badge color="success">Success</Badge>
-      <Badge color="warning">Warning</Badge>
-      <Badge color="danger">Danger</Badge>
-    </div>
+    <StoryGrid>
+      {COLORS.map((c) => (
+        <Badge key={c} color={c}>{capitalize(c)}</Badge>
+      ))}
+    </StoryGrid>
   )
 }
 
 export const Size: Story = {
   render: () => (
-    <div className="flex flex-wrap items-center gap-3">
-      <Badge size="1">Size 1</Badge>
-      <Badge size="2">Size 2</Badge>
-      <Badge size="3">Size 3</Badge>
-      <Badge size="4">Size 4</Badge>
-    </div>
+    <StoryGrid>
+      {SIZES.map((s) => (
+        <Badge key={s} size={s}>Size {s}</Badge>
+      ))}
+    </StoryGrid>
   )
 }
 
 export const AsLink: Story = {
   render: () => (
-    <div className="flex flex-wrap items-center gap-3">
-      <Badge asChild variant="surface">
-        <a href="#" onClick={(event) => event.preventDefault()}>
-          Surface Link
-        </a>
-      </Badge>
-      <Badge asChild variant="solid">
-        <a href="#" onClick={(event) => event.preventDefault()}>
-          Solid Link
-        </a>
-      </Badge>
-      <Badge asChild variant="ghost">
-        <a href="#" onClick={(event) => event.preventDefault()}>
-          Ghost Link
-        </a>
-      </Badge>
-    </div>
+    <StoryGrid>
+      {LINK_VARIANTS.map((v) => (
+        <Badge key={v} asChild variant={v}>
+          <a href="#" onClick={preventDefaultClick}>
+            {capitalize(v)} Link
+          </a>
+        </Badge>
+      ))}
+    </StoryGrid>
   )
 }
