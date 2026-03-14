@@ -6,7 +6,7 @@ import {
 } from "@hugeicons/core-free-icons"
 import { HugeiconsIcon } from "@hugeicons/react"
 
-import { Callout, CalloutDescription, CalloutIcon } from "@conty/ui"
+import { Callout, CalloutDescription, CalloutIcon, CalloutTitle } from "@conty/ui"
 
 const meta = {
   title: "Components/Callout",
@@ -116,6 +116,24 @@ export const Destructive: Story = {
       </CalloutIcon>
       <CalloutDescription>
         We could not complete your request. Please check your data and try again.
+      </CalloutDescription>
+    </Callout>
+  )
+}
+
+export const WithTitle: Story = {
+  render: (args) => (
+    <Callout {...args} className="max-w-md">
+      <CalloutIcon>
+        <HugeiconsIcon icon={InformationCircleIcon} size={20} strokeWidth={1.8} />
+      </CalloutIcon>
+      <CalloutTitle>Update Available</CalloutTitle>
+      <CalloutDescription>
+        You will need to upgrade to the{" "}
+        <a href="#" onClick={(event) => event.preventDefault()}>
+          newest Frosted-UI
+        </a>{" "}
+        version now.
       </CalloutDescription>
     </Callout>
   )
