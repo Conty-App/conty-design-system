@@ -69,6 +69,7 @@ npm run storybook
 - `npm run build`: builda todos os pacotes.
 - `npm run lint`: executa lint em todos os pacotes.
 - `npm run typecheck`: valida tipagem em todos os pacotes.
+- `npm run test`: executa os testes dos workspaces que possuem script de teste.
 
 ## Como contribuir (fluxo simples)
 
@@ -94,6 +95,7 @@ npm run storybook
 - `docs/organizacao-repo.md`: convencoes de organizacao do monorepo.
 - `docs/release-process.md`: passo a passo de release.
 - `docs/button.md`: contrato atual e guia rapido do componente Button.
+- `docs/testes-ui.md`: setup de testes do `@conty/ui` e guia de uso.
 
 ## Cursor Rules
 
