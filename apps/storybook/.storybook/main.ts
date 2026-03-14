@@ -11,7 +11,8 @@ const config: StorybookConfig = {
   addons: [
     getAbsolutePath("@storybook/addon-docs"),
     getAbsolutePath("@storybook/addon-a11y"),
-    getAbsolutePath("@storybook/addon-mcp")
+    getAbsolutePath("@storybook/addon-mcp"),
+    getAbsolutePath("@storybook/addon-vitest")
   ],
 
   framework: {
